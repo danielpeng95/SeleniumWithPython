@@ -1,7 +1,7 @@
 import unittest
 
 
-class LoginTest(unittest.TestCase):
+class SignUpTest(unittest.TestCase):
     def test_SignUpByEmail(self):
         print("This is sign up by email test")
         self.assertTrue(True)
