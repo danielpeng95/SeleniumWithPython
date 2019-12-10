@@ -14,10 +14,12 @@ tc4 = unittest.TestLoader().loadTestsFromTestCase(PaymentReturnsTest)
 # Creating Test Suites
 sanityTestSuite = unittest.TestSuite([tc1, tc2])  # sanity Test Suite
 functionalTestSuite = unittest.TestSuite([tc3, tc4])  # functional Test Suite
-masterTestSuite = unittest.TestSuite([tc1, tc2, tc3, tc4])  # master Test Suite | All Test Cases
+# unittest.TextTestRunner().run(sanityTestSuite)
+# unittest.TextTestRunner().run(functionalTestSuite)
 
-unittest.TextTestRunner().run(sanityTestSuite)
-unittest.TextTestRunner().run(functionalTestSuite)
-unittest.TextTestRunner().run(masterTestSuite)
+masterTestSuite = unittest.TestSuite([tc1, tc2, tc3, tc4])  # master Test Suite | All Test Cases
+# unittest.TextTestRunner().run(masterTestSuite)
+
+unittest.TextTestRunner(verbosity=2).run(masterTestSuite)
 
 
