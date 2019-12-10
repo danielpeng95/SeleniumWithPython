@@ -18,8 +18,6 @@ functionalTestSuite = unittest.TestSuite([tc3, tc4])  # functional Test Suite
 # unittest.TextTestRunner().run(functionalTestSuite)
 
 masterTestSuite = unittest.TestSuite([tc1, tc2, tc3, tc4])  # master Test Suite | All Test Cases
-# unittest.TextTestRunner().run(masterTestSuite)
-
 unittest.TextTestRunner(verbosity=2).run(masterTestSuite)
 
 
